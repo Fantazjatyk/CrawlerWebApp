@@ -1,0 +1,40 @@
+#registration h1{
+    font-size: x-large;
+    color: slateblue;
+}
+
+#registration{
+    padding: 1em;
+}
+
+#registration  form input{
+    padding: .5em;
+    font-size: 15px;
+    border: 1px solid;
+    border-color: silver;
+
+}
+
+#registration form{
+
+}
+
+#registration form input[type='submit']{
+background: slateblue;
+color:white;
+border: 1px solid transparent;
+}
+
+#registration form input[type='email']{
+    outline: none;
+}
+#registration form input[type='email']:hover, #registration form input[type='email']:focus {
+    border-color: slateblue;
+}
+#registration p{
+    font-family: inherit;
+}
+
+#registration section{
+   
+}

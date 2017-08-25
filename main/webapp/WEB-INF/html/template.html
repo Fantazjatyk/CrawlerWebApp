@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="stylesheet" th:href="@{/resources/css/crawler.css}" />
+</head>
+
+<body>
+        <header id="global-header">
+            <div class="fix">
+            <a class="logo" th:href="@{/}">Crawler</a>
+            <ul>
+                <li><a href="http://www.michal-szymanski.pl">Author</a></li>
+            </ul>
+            </div>
+        </header>
+        <div id="content" th:include="${site}"></div>
+        <div id="footer">©2017 Michał Szymański</div>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<body>
+    <table id="resultBox">
+        <tr>
+            <td>
+                <div id="target_info">
+                    <div><label class="param">Adres: </label><label id="target" /></div>
+                    <div><label class="param">Czas: </label><label id="time" /> sekund</div>
+                    <div><label class="param">Sentencje: </label><label id="sentencesInit" /></div>
+                </div>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div id="tabs">
+                    <ul>
+                        <li></li>
+                        <li><a href="#tabs-2">Found Sentences</a></li>
+                        <li><a href="#tabs-1">Found Images</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <div id="found_images"></div>
+                    </div>
+                    <div id="tabs-2">
+                        <div id="found_sentences"></div>
+                    </div>
+                </div>
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>

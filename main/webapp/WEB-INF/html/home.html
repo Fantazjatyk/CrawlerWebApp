@@ -1,0 +1,64 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
+
+    <script th:src="@{/resources/js/crawler.js}"></script>
+    <meta name="key" th:content="${key}" />
+</head>
+
+<body>
+    <div id="crawler">
+        <main>
+            <section id="adress_section" class="settings-section">
+
+                <article>
+                    <header>Adres: </header>
+                    <input id="adress" placeholder="http://www.example.com/" name="url" type="text"></input>
+                </article>
+            </section>
+            <section id="general_settings_section" class="settings-section">
+                <article>
+                    <header>Czas trwania: <input type="number" name="duration" id="time_limit" readonly></input>
+                    </header>
+                    <div id="slider"></div>
+                </article>
+            </section>
+            <section id="specific_settings_section" class="settings-section">
+                <article>
+                    <header>Słowa</header>
+                    <div><input placeholder="sentence1, sentence2, sentence2" id="sentences" type="text" name="sentences"></input>
+                    </div>
+                </article>
+                <article>
+                    <input id="ignorecase" name="ignoreCase" type="checkbox" /><label>Ignoruj wielkość liter</label>
+                </article>
+            </section>
+            <section id="key_section" class="settings-section">
+                <article>
+                    <header>Klucz</header>
+                    <div><input id="key" type="text" name="key"></input>
+                    </div>
+                    <a class="generate-key" th:href="@{/registration}">wygeneruj nowy klucz</a>
+                </article>
+            </section>
+            <section class="settings-section">
+                <div id="errors_holder">
+                </div>
+            </section>
+            <section class="settings-section">
+                <div id="progress">
+                    <label id="progress_label"></label></div>
+                <div>
+                    <button id="confirm_button">Wyszukaj</button>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

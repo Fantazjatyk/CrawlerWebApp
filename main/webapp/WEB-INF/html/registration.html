@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <link rel="stylesheet" th:href="@{/resources/css/registration.css}" />
+</head>
+
+<body>
+    <div id="registration">
+        <h1>Get Crawler key</h1>
+        <section>
+        <p>
+            In order to receive new free crawler key, which allows to use the Crawler software, type bellow your email adress. 
+            The crawler key will be sent to you in few minutes.
+        </p>
+        </section>
+        <section>
+        <form method="post" th:action="@{/register}">
+            <input name="email" placeholder="Your email" type="email" />
+            <input type="submit" value="Send" />
+            <p id="${message}"/>
+        </form>
+        </section>
+    </div>
+    </table>
+</body>
+
+</html>

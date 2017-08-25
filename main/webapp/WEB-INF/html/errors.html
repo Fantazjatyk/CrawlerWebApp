@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link th:href="@{/resources/css/errors.css}" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="global_wrapper">
+        <main>
+            <div>
+                <label class="code-label" th:text="${error_code}" />
+            </div>
+            <div>
+                <label class="desc-label" th:text="${error_desc}" />
+            </div>
+        </main>
+        <div class="menu">
+            <a class="menu-item" th:href="@{/}">Strona główna</a>
+        </div>
+    </div>
+</body>
+
+</html>
