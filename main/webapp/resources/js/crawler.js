@@ -53,11 +53,15 @@ var CrawlerResults = (function () {
         this.prepareCanvas();
         var sentences = data.sentences;
         var images = data.images;
-        this.sentencesResults.generateResults(sentences);
-        this.imageResults.generateResults(images);
+        if (images != null && images != undefined) {
+            this.imageResults.generateResults(images);
+        }
+        if (sentences != null && sentences != undefined) {
+            this.sentencesResults.generateResults(sentences);
+        }
         $("#target").html(data.target);
         $("#time").html(data.time);
-        $("#sentencesInit").html(data.sentencesInit);
+        $("#sentencesInit").html(data.sentencesInit.join(", "));
         this.setEventHandlers();
     };
     CrawlerResults.prototype.setEventHandlers = function () {
@@ -217,7 +221,8 @@ var CrawlerInitializer = (function () {
             timeLimit: $("#time_limit").val(),
             type: $("input[name='type']:checked").val(),
             key: self.getKey(),
-            ignoreCase: $("input[name='ignoreCase']").is(":checked")
+            ignoreCase: $("input[name='ignoreCase']").is(":checked"),
+            lookForImages: $("input[name='lookForImages']").is(":checked")
         };
     };
     CrawlerInitializer.prototype.getKey = function () {

@@ -50,12 +50,17 @@ class CrawlerResults {
         this.prepareCanvas();
         var sentences: Array<any> = data.sentences;
         var images: Array<any> = data.images;
-        this.sentencesResults.generateResults(sentences);
-        this.imageResults.generateResults(images);
+
+        if (images != null && images != undefined) {
+            this.imageResults.generateResults(images);
+        }
+        if (sentences != null && sentences != undefined) {
+            this.sentencesResults.generateResults(sentences);
+        }
 
         $("#target").html(data.target);
         $("#time").html(data.time);
-        $("#sentencesInit").html(data.sentencesInit);
+        $("#sentencesInit").html(data.sentencesInit.join(", "));
         this.setEventHandlers();
     }
 
@@ -229,7 +234,8 @@ class CrawlerInitializer {
             timeLimit: $("#time_limit").val(),
             type: $("input[name='type']:checked").val(),
             key: self.getKey(),
-            ignoreCase: $("input[name='ignoreCase']").is(":checked")
+            ignoreCase: $("input[name='ignoreCase']").is(":checked"),
+            lookForImages: $("input[name='lookForImages']").is(":checked")
 
         }
     }

@@ -37,11 +37,14 @@
                 <article>
                     <input id="ignorecase" name="ignoreCase" type="checkbox" /><label>Ignoruj wielkość liter</label>
                 </article>
+                <article>
+                    <input id="lookforImages" name="lookForImages" type="checkbox" checked/><label>Szukaj obrazów</label>
+                </article>
             </section>
             <section id="key_section" class="settings-section">
                 <article>
                     <header>Klucz</header>
-                    <div><input id="key" type="text" name="key"></input>
+                    <div><input id="key" type="password" name="key"></input>
                     </div>
                     <a class="generate-key" th:href="@{/registration}">wygeneruj nowy klucz</a>
                 </article>
