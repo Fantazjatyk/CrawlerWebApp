@@ -26,9 +26,7 @@ package crawler.services;
 import crawler.dao.KeysHolder;
 import crawler.model.Key;
 import javax.transaction.Transactional;
-import org.junit.AfterClass;
 import static org.junit.Assert.*;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,14 +45,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 public class KeyPuncherTest {
 
     public KeyPuncherTest() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
-    @Before
-    public void setUp() {
     }
 
     @Autowired

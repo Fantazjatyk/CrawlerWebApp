@@ -23,7 +23,6 @@
  */
 package crawler.conf;
 
-import org.junit.AfterClass;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,10 +37,6 @@ public class EmailTemplatesTest {
     }
 
     EmailTemplates et;
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
 
     @Before
     public void setUp() {

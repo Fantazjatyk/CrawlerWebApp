@@ -28,7 +28,6 @@ import java.util.Set;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
-import org.junit.AfterClass;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -57,10 +56,6 @@ public class URLValidatorTest {
         public TestClass(String url) {
             this.url = url;
         }
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
     }
 
     Validator valid = Validation.buildDefaultValidatorFactory().getValidator();

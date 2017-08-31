@@ -28,9 +28,7 @@ import crawler.model.ValidKey;
 import java.util.Set;
 import javax.transaction.Transactional;
 import javax.validation.Validator;
-import org.junit.AfterClass;
 import static org.junit.Assert.*;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,10 +50,6 @@ public class KeyValidatorTest {
     public KeyValidatorTest() {
     }
 
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
     public class ValidKeyTest {
 
         @ValidKey
@@ -72,10 +66,6 @@ public class KeyValidatorTest {
     @Autowired
     KeysHolder kh;
 
-    @Before
-    public void setUp() {
-
-    }
     @Autowired
     @Qualifier("validator")
     Validator valid;

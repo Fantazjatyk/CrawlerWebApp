@@ -24,7 +24,6 @@
 package crawler.ctrs;
 
 import javax.transaction.Transactional;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -49,10 +48,6 @@ import org.springframework.web.context.WebApplicationContext;
 public class ViewResolverTest {
 
     public ViewResolverTest() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
     }
 
     MockMvc mvc;

@@ -28,9 +28,7 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import org.junit.AfterClass;
 import static org.junit.Assert.*;
-import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -42,15 +40,7 @@ public class StringArrayDeserializerTest {
     public StringArrayDeserializerTest() {
     }
 
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
     StringArrayTrimmedDeserializer ds;
-
-    @Before
-    public void setUp() {
-    }
 
     static class TestClass {
 

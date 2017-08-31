@@ -29,7 +29,6 @@ import crawler.model.CrawlerInit;
 import crawler.model.CrawlerResult;
 import java.util.Arrays;
 import javax.transaction.Transactional;
-import org.junit.AfterClass;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -65,10 +64,6 @@ public class CrawlersManagerTest {
     }
 
     public CrawlersManagerTest() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
     }
 
     @Test

@@ -25,7 +25,6 @@ package crawler.dao;
 
 import crawler.model.Key;
 import javax.transaction.Transactional;
-import org.junit.AfterClass;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -46,10 +45,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 public class KeysHolderTest {
 
     public KeysHolderTest() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
     }
 
     String key;
