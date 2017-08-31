@@ -45,9 +45,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 public class URLValidatorTest {
 
-    public URLValidatorTest() {
-    }
-
     public class TestClass {
 
         @ValidURL

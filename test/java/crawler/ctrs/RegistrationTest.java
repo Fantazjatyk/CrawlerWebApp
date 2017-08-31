@@ -50,9 +50,6 @@ import org.springframework.web.context.WebApplicationContext;
 @Transactional
 public class RegistrationTest {
 
-    public RegistrationTest() {
-    }
-
     MockMvc mvc;
 
     @Autowired
@@ -91,7 +88,6 @@ public class RegistrationTest {
                 .andExpect(forwardedUrl("/register/failure"));
     }
 
-
     @Test
     public void testRegisterSuccess() throws Exception {
         mvc.perform(get("/register/success"))
@@ -100,7 +96,6 @@ public class RegistrationTest {
 
     }
 
-
     @Test
     public void testRegisterFailure() throws Exception {
         mvc.perform(get("/register/failure"))
@@ -108,7 +103,6 @@ public class RegistrationTest {
                 .andExpect(view().name("template"))
                 .andExpect(model().attributeExists("message", "title", "site"));
     }
-
 
     @Test
     public void testConfirmEmail() throws Exception {

@@ -37,9 +37,6 @@ import org.junit.Test;
  */
 public class StringArrayDeserializerTest {
 
-    public StringArrayDeserializerTest() {
-    }
-
     StringArrayTrimmedDeserializer ds;
 
     static class TestClass {

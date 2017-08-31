@@ -47,9 +47,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @Transactional
 public class KeyValidatorTest {
 
-    public KeyValidatorTest() {
-    }
-
     public class ValidKeyTest {
 
         @ValidKey

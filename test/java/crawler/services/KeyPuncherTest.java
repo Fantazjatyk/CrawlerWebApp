@@ -44,9 +44,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @Transactional
 public class KeyPuncherTest {
 
-    public KeyPuncherTest() {
-    }
-
     @Autowired
     KeyPuncher kp;
 
@@ -54,7 +51,6 @@ public class KeyPuncherTest {
     KeysHolder kh;
 
     String email = "email@email.com";
-
 
     @Test
     public void testUseKey() {

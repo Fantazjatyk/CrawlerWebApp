@@ -63,9 +63,6 @@ public class CrawlersManagerTest {
         key = kh.registerKey(email);
     }
 
-    public CrawlersManagerTest() {
-    }
-
     @Test
     public void testRunCrawler() {
         String target = "http://www.google.pl";

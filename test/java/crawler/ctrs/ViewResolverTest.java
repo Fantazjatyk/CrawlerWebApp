@@ -47,9 +47,6 @@ import org.springframework.web.context.WebApplicationContext;
 @Transactional
 public class ViewResolverTest {
 
-    public ViewResolverTest() {
-    }
-
     MockMvc mvc;
 
     @Autowired
@@ -63,7 +60,6 @@ public class ViewResolverTest {
         mvc = MockMvcBuilders.webAppContextSetup(ctx).build();
     }
 
-
     @Test
     public void testWelcome() throws Exception {
 
@@ -74,14 +70,12 @@ public class ViewResolverTest {
 
     }
 
-
     @Test
     public void testResults() throws Exception {
         mvc.perform(get("/results"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("results"));
     }
-
 
     @Test
     public void testRegistration() throws Exception {

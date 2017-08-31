@@ -43,9 +43,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @WebAppConfiguration
 public class EmailsHolderTest {
 
-    public EmailsHolderTest() {
-    }
-
     String email = "email@email.com";
 
     @Autowired
@@ -58,7 +55,6 @@ public class EmailsHolderTest {
         assertNotNull(eh.getEmailById(id));
     }
 
-
     @Test(expected = EmptyResultDataAccessException.class)
     public void testRemoveEmail() {
         Number id = eh.addEmail(email);
@@ -68,7 +64,6 @@ public class EmailsHolderTest {
 
     }
 
-
     @Test
     public void testGetByConfirmKey() {
         Number id = eh.addEmail(email);
@@ -77,14 +72,12 @@ public class EmailsHolderTest {
         assertEquals(email, email2);
     }
 
-
     @Test
     public void testGetConfirmationKey() {
         Number id = eh.addEmail(email);
         String key = eh.getConfirmationKey(email);
         assertFalse(key.isEmpty());
     }
-
 
     @Test
     public void testContainsEmail() {

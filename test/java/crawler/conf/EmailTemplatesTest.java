@@ -33,16 +33,12 @@ import org.junit.Test;
  */
 public class EmailTemplatesTest {
 
-    public EmailTemplatesTest() {
-    }
-
     EmailTemplates et;
 
     @Before
     public void setUp() {
         this.et = new EmailTemplates();
     }
-
 
     @Test
     public void testGetLetterTemplate() {

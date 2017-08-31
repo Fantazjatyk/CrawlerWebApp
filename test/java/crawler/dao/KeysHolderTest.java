@@ -44,9 +44,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 @Transactional
 public class KeysHolderTest {
 
-    public KeysHolderTest() {
-    }
-
     String key;
     String email = "email@email.com";
 
@@ -81,7 +78,6 @@ public class KeysHolderTest {
         assertTrue(publicKey.getRemainedUse() > 0);
     }
 
-
     @Test
     public void testRefreshAllKeys() {
         Key wrapper = kh.getKeyWrapper(key);
@@ -97,7 +93,6 @@ public class KeysHolderTest {
         Key wrapper3 = kh.getKeyWrapper(key);
         assertEquals(wrapper.getRemainedUse(), wrapper3.getRemainedUse());
     }
-
 
     @Test
     public void testDeicrementKeyUsage() {
