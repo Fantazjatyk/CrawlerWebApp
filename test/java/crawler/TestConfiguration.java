@@ -39,6 +39,6 @@ import org.springframework.context.annotation.ImportResource;
  */
 @Configuration
 @ImportResource("classpath:*/spring/basic.xml")
-public class Conf {
+public class TestConfiguration {
 
 }

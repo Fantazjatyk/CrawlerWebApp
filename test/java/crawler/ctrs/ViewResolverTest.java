@@ -25,7 +25,7 @@ package crawler.ctrs;
 
 import java.util.Arrays;
 import javax.transaction.Transactional;
-import crawler.Conf;
+import crawler.TestConfiguration;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.Test;
