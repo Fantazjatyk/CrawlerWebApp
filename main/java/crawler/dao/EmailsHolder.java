@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -23,7 +23,9 @@
  */
 package crawler.dao;
 
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
@@ -58,7 +60,7 @@ public class EmailsHolder {
     }
 
     public Number addEmail(String email) {
-        HashMap map = new HashMap();
+        Map map = new HashMap();
         map.put("email", email);
         String key = UUID.randomUUID().toString().replaceAll("-", "");
         map.put("confirmation_key", key);
@@ -66,35 +68,27 @@ public class EmailsHolder {
     }
 
     public void removeEmail(String email) {
-        HashMap map = new HashMap();
-        map.put("email", email);
+        Map map = Collections.singletonMap("email", email);
         template.update("delete from unconfirmed_emails where email = :email", map);
-
     }
 
     public String getEmailByConfirmKey(String key) {
-        HashMap map = new HashMap();
-        map.put("key", key);
-
+        Map map = Collections.singletonMap("key", key);
         return template.queryForObject("select email from unconfirmed_emails where confirmation_key = :key", map, String.class);
     }
 
     public String getEmailById(Number id) {
-        HashMap map = new HashMap();
-        map.put("id", id);
-
+        Map map = Collections.singletonMap("id", id);
         return template.queryForObject("select email from unconfirmed_emails where id = :id", map, String.class);
     }
 
     public String getConfirmationKey(String email) throws EmptyResultDataAccessException {
-        HashMap map = new HashMap();
-        map.put("email", email);
+        Map map = Collections.singletonMap("email", email);
         return template.queryForObject("select confirmation_key from unconfirmed_emails where email = :email", map, String.class);
     }
 
     public boolean containsEmail(String email) {
-        HashMap map = new HashMap();
-        map.put("email", email);
+        Map map = Collections.singletonMap("email", email);
         String statement = "select count(email) from (select email from unconfirmed_emails union select email from access_keys) as mix where email = :email";
 
         Long count = template.queryForObject(statement, map, Long.class);

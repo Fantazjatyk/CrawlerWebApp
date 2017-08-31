@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -34,6 +34,8 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 import crawler.dao.mappers.KeyMapper;
 import crawler.model.Key;
+import java.util.Collections;
+import java.util.Map;
 
 /**
  *
@@ -49,8 +51,7 @@ public class KeysHolder {
     KeyMapper mapper;
 
     public Key getKeyWrapper(String value) {
-        HashMap params = new HashMap();
-        params.put("value", value);
+        Map params = Collections.singletonMap("value", value);
         Key key = null;
 
         try {
@@ -62,7 +63,7 @@ public class KeysHolder {
     }
 
     public String registerKey(String email) {
-        HashMap params = new HashMap();
+        Map params = new HashMap();
         String key = RandomStringUtils.randomAlphanumeric(8);
         params.put("email", email);
         params.put("value", key);
@@ -76,15 +77,13 @@ public class KeysHolder {
     }
 
     public void refreshAllKeys() {
-        HashMap params = new HashMap();
-        params.put("value", 10);
+        Map params = Collections.singletonMap("value", 10);
         String st = "update access_keys set usages_left = :value";
         template.update(st, params);
     }
 
     public void deicrementKeyUsage(Key key) {
-        HashMap params = new HashMap();
-        params.put("value", key.getValue());
+        Map params = Collections.singletonMap("value", key.getValue());
         template.update("update access_keys set usages_left = usages_left -1 where value=:value", params);
     }
 
