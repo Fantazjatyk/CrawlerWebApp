@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -81,26 +81,24 @@ public class Beans {
     @Bean
     @Qualifier("mail")
     public Properties mailProperties() {
-        InputStream is = this.getClass().getClassLoader().getResourceAsStream("mail.properties");
-        Properties p = new Properties();
-        try {
-            p.load(is);
-        } catch (IOException ex) {
-            Logger.getLogger(Beans.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return p;
+        return getProperties("mail.properties");
     }
 
     @Bean
     @Qualifier("jdbc")
     public Properties jdbcProperties() {
-        InputStream is = this.getClass().getClassLoader().getResourceAsStream("jdbc.properties");
+        return getProperties("jdbc.properties");
+    }
+
+    private Properties getProperties(String resourceName) {
         Properties p = new Properties();
-        try {
+        try (InputStream is = this.getClass().getClassLoader().getResourceAsStream(resourceName)) {
+
             p.load(is);
         } catch (IOException ex) {
             Logger.getLogger(Beans.class.getName()).log(Level.SEVERE, null, ex);
         }
+
         return p;
     }
 
