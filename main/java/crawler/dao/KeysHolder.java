@@ -23,8 +23,11 @@
  */
 package crawler.dao;
 
+import crawler.dao.mappers.KeyMapper;
+import crawler.model.Key;
+import java.util.Collections;
 import java.util.HashMap;
-import java.util.UUID;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -32,10 +35,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-import crawler.dao.mappers.KeyMapper;
-import crawler.model.Key;
-import java.util.Collections;
-import java.util.Map;
 
 /**
  *

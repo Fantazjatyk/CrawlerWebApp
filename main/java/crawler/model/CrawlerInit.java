@@ -26,11 +26,11 @@ package crawler.model;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.impl.StringArraySerializer;
+import crawler.services.StringArrayTrimmedDeserializer;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import crawler.services.StringArrayTrimmedDeserializer;
 
 /**
  *

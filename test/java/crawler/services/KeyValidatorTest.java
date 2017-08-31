@@ -23,23 +23,21 @@
  */
 package crawler.services;
 
-import java.util.Random;
+import crawler.dao.KeysHolder;
+import crawler.model.ValidKey;
 import java.util.Set;
 import javax.transaction.Transactional;
-import javax.validation.Validation;
 import javax.validation.Validator;
 import org.junit.AfterClass;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
-import crawler.dao.KeysHolder;
-import crawler.model.ValidKey;
 
 /**
  *

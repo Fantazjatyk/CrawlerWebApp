@@ -23,10 +23,10 @@
  */
 package crawler.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import crawler.dao.KeysHolder;
 import crawler.model.Key;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *

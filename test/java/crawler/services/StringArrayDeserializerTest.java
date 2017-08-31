@@ -23,16 +23,15 @@
  */
 package crawler.services;
 
-import crawler.services.StringArrayTrimmedDeserializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.AfterClass;
+import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *

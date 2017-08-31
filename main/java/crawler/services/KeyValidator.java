@@ -23,13 +23,13 @@
  */
 package crawler.services;
 
+import crawler.dao.KeysHolder;
+import crawler.model.Key;
+import crawler.model.ValidKey;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import crawler.dao.KeysHolder;
-import crawler.model.Key;
-import crawler.model.ValidKey;
 
 /**
  *

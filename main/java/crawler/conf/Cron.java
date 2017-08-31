@@ -23,12 +23,10 @@
  */
 package crawler.conf;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import crawler.dao.KeysHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.Scheduled;
-import crawler.dao.KeysHolder;
 
 /**
  *

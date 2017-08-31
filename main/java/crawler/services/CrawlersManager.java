@@ -23,27 +23,17 @@
  */
 package crawler.services;
 
-import crawler.model.CrawlerResult;
-import crawler.model.CrawlerInit;
-import crawler.configuration.CrawlerConfiguration;
-import crawler.configuration.CrawlerParams;
 import crawler.crawlers.Crawler;
 import crawler.crawlers.continous.FlexibleContinousCrawler;
 import crawler.crawlers.oneshot.FlexibleOneShotCrawler;
 import crawler.exception.InitialConfigurationException;
-import crawler.scrapping.collectors.Collector;
+import crawler.model.CrawlerInit;
+import crawler.model.CrawlerResult;
 import crawler.scrapping.collectors.DataHolderCollector;
 import crawler.scrapping.collectors.ImagesCollector;
 import crawler.scrapping.collectors.SentencesCollector;
 import java.util.Map;
 import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import michal.szymanski.util.Arrays;
-import michal.szymanski.util.Strings;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**

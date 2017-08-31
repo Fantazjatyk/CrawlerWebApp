@@ -26,7 +26,6 @@ package crawler.services;
 import crawler.crawlers.Crawler;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicReference;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**

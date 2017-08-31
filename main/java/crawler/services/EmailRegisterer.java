@@ -23,20 +23,15 @@
  */
 package crawler.services;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import crawler.dao.EmailsHolder;
+import crawler.dao.KeysHolder;
+import crawler.exceptions.UnknownEmailException;
 import java.text.MessageFormat;
-import java.util.HashMap;
 import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
-import crawler.dao.EmailsHolder;
-import crawler.dao.KeysHolder;
-import crawler.exceptions.UnknownEmailException;
 
 /**
  *
