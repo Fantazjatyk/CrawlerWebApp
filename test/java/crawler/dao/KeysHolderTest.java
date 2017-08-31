@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -62,9 +62,6 @@ public class KeysHolderTest {
 
     }
 
-    /**
-     * Test of getKeyWrapper method, of class KeysHolder.
-     */
     @Autowired
     KeysHolder kh;
 
@@ -79,12 +76,6 @@ public class KeysHolderTest {
         assertTrue(wrapper.getRemainedUse() > 0);
     }
 
-    /**
-     * Test of registerKey method, of class KeysHolder.
-     */
-    /**
-     * Test of getPublicKeyWrapper method, of class KeysHolder.
-     */
     @Test
     public void testGetPublicKeyWrapper() {
         kh.refreshAllKeys();
@@ -96,9 +87,7 @@ public class KeysHolderTest {
         assertTrue(publicKey.getRemainedUse() > 0);
     }
 
-    /**
-     * Test of refreshAllKeys method, of class KeysHolder.
-     */
+
     @Test
     public void testRefreshAllKeys() {
         Key wrapper = kh.getKeyWrapper(key);
@@ -115,9 +104,7 @@ public class KeysHolderTest {
         assertEquals(wrapper.getRemainedUse(), wrapper3.getRemainedUse());
     }
 
-    /**
-     * Test of deicrementKeyUsage method, of class KeysHolder.
-     */
+
     @Test
     public void testDeicrementKeyUsage() {
         Key wrapper = kh.getKeyWrapper(key);

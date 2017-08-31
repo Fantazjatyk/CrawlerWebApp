@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -43,6 +43,7 @@ public class URLValidator implements ConstraintValidator<ValidURL, String> {
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
+
         URL test;
         try {
             test = new URL(value);

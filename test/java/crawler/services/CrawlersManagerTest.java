@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -72,9 +72,6 @@ public class CrawlersManagerTest {
     public static void tearDownClass() {
     }
 
-    /**
-     * Test of initCrawler method, of class CrawlersManager.
-     */
     @Test
     public void testRunCrawler() {
         String target = "http://www.google.pl";
@@ -91,11 +88,10 @@ public class CrawlersManagerTest {
         assertTrue(r.getTime() > 0);
         assertEquals(r.getTarget(), target);
         assertTrue(Arrays.equals(sentences, r.getSentencesInit()));
-
     }
 
     @Test(expected = InitialConfigurationException.class)
-    public void testRunCrawler_FAIL() {
+    public void testRunCrawler_BadConfiguration() {
         String target = "/www.google.pl";
         String[] sentences = new String[]{"first", "second", "third"};
         CrawlerInit init = new CrawlerInit();
@@ -104,12 +100,7 @@ public class CrawlersManagerTest {
         init.setTimeLimit(1);
         init.setUrl(target);
 
-        CrawlerResult r = manager.runCrawler(init, email);
+        manager.runCrawler(init, email);
     }
-
-    /**
-     * Test of getResponse method, of class CrawlersManager.
-     */
-
 
 }

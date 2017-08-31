@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -76,9 +76,7 @@ public class ViewResolverTest {
         mvc = MockMvcBuilders.webAppContextSetup(ctx).build();
     }
 
-    /**
-     * Test of welcome method, of class ViewResolver.
-     */
+
     @Test
     public void testWelcome() throws Exception {
 
@@ -89,9 +87,7 @@ public class ViewResolverTest {
 
     }
 
-    /**
-     * Test of results method, of class ViewResolver.
-     */
+
     @Test
     public void testResults() throws Exception {
         mvc.perform(get("/results"))
@@ -99,9 +95,7 @@ public class ViewResolverTest {
                 .andExpect(view().name("results"));
     }
 
-    /**
-     * Test of registration method, of class ViewResolver.
-     */
+
     @Test
     public void testRegistration() throws Exception {
         mvc.perform(get("/registration"))

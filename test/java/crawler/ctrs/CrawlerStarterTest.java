@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -84,9 +84,6 @@ public class CrawlerStarterTest {
         mvc = MockMvcBuilders.webAppContextSetup(ctx).build();
     }
 
-    /**
-     * Test of handleRequest method, of class CrawlerStarter.
-     */
     @Autowired
     KeysHolder kh;
 
@@ -104,11 +101,10 @@ public class CrawlerStarterTest {
 
         String serialized = new ObjectMapper().writeValueAsString(init);
 
-        MvcResult result = mvc.perform(post("/crawl").content(serialized).contentType(org.springframework.http.MediaType.APPLICATION_JSON_UTF8))
+        mvc.perform(post("/crawl").content(serialized).contentType(org.springframework.http.MediaType.APPLICATION_JSON_UTF8))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(org.springframework.http.MediaType.APPLICATION_JSON_UTF8))
-                .andReturn();
+                .andExpect(content().contentType(org.springframework.http.MediaType.APPLICATION_JSON_UTF8));
 
     }
 

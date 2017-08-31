@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -49,9 +49,7 @@ public class EmailTemplatesTest {
         this.et = new EmailTemplates();
     }
 
-    /**
-     * Test of getConfirmEmailLetterTemplate method, of class EmailTemplates.
-     */
+
     @Test
     public void testGetLetterTemplate() {
         String result = et.getConfirmEmailLetterTemplate();

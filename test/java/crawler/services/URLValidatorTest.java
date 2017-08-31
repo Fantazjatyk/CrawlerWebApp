@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -51,6 +51,16 @@ public class URLValidatorTest {
     public URLValidatorTest() {
     }
 
+    public class TestClass {
+
+        @ValidURL
+        String url;
+
+        public TestClass(String url) {
+            this.url = url;
+        }
+    }
+
     @AfterClass
     public static void tearDownClass() {
     }
@@ -66,18 +76,12 @@ public class URLValidatorTest {
     TestClass validObject;
     TestClass invalidObject;
 
-    /**
-     * Test of isValid method, of class URLValidator.
-     */
     @Test
     public void testIsValid() {
         Set<ConstraintViolation<TestClass>> set = valid.validate(validObject);
         assertTrue(set.isEmpty());
     }
 
-    /**
-     * Test of initialize method, of class URLValidator.
-     */
     @Test
     public void testIsInValid() {
         Set<ConstraintViolation<TestClass>> set = valid.validate(invalidObject);

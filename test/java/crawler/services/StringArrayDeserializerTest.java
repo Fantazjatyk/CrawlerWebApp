@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -53,9 +53,6 @@ public class StringArrayDeserializerTest {
     public void setUp() {
     }
 
-    /**
-     * Test of deserialize method, of class StringArrayTrimmedDeserializer.
-     */
     static class TestClass {
 
         @JsonDeserialize(using = StringArrayTrimmedDeserializer.class)

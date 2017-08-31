@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -75,9 +75,6 @@ public class RegistrationTest {
 
     String email = "email@email.com";
 
-    /**
-     * Test of register method, of class Registration.
-     */
     @Test
     public void testRegister_OK() throws Exception {
         mvc.perform(post("/register?email=" + email))
@@ -101,9 +98,7 @@ public class RegistrationTest {
                 .andExpect(forwardedUrl("/register/failure"));
     }
 
-    /**
-     * Test of registerSuccess method, of class Registration.
-     */
+
     @Test
     public void testRegisterSuccess() throws Exception {
         mvc.perform(get("/register/success"))
@@ -112,9 +107,7 @@ public class RegistrationTest {
 
     }
 
-    /**
-     * Test of registerFailure method, of class Registration.
-     */
+
     @Test
     public void testRegisterFailure() throws Exception {
         mvc.perform(get("/register/failure"))
@@ -123,9 +116,7 @@ public class RegistrationTest {
                 .andExpect(model().attributeExists("message", "title", "site"));
     }
 
-    /**
-     * Test of confirmEmail method, of class Registration.
-     */
+
     @Test
     public void testConfirmEmail() throws Exception {
         eh.addEmail(email);

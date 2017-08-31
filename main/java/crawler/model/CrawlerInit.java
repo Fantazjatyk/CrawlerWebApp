@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -45,7 +45,7 @@ public class CrawlerInit {
     @Min(value = 0, message = "Time limit cannot be lower than 0")
     @Max(360)
     private int timeLimit;
-    String type;
+    private String type;
     @NotNull
     @Size(min = 5, max = 500, message = "URL size must be between {min} and {max} characters")
     @ValidURL

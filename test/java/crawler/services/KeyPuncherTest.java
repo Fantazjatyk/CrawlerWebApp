@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -66,9 +66,7 @@ public class KeyPuncherTest {
 
     String email = "email@email.com";
 
-    /**
-     * Test of useKey method, of class KeyPuncher.
-     */
+
     @Test
     public void testUseKey() {
         String key = kh.registerKey(email);
@@ -83,7 +81,4 @@ public class KeyPuncherTest {
 
     }
 
-    /**
-     * Test of useKey method, of class KeyPuncher.
-     */
 }

@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -58,6 +58,17 @@ public class KeyValidatorTest {
     public static void tearDownClass() {
     }
 
+    public class ValidKeyTest {
+
+        @ValidKey
+        String key;
+
+        public ValidKeyTest(String key) {
+            this.key = key;
+        }
+
+    }
+
     final String email = "email@email.com";
 
     @Autowired
@@ -71,12 +82,6 @@ public class KeyValidatorTest {
     @Qualifier("validator")
     Validator valid;
 
-    /**
-     * Test of initialize method, of class KeyValidator.
-     */
-    /**
-     * Test of isValid method, of class KeyValidator.
-     */
     @Test
     public void testIsValid() {
         String key = kh.registerKey(email);
@@ -84,13 +89,8 @@ public class KeyValidatorTest {
         assertTrue(set.isEmpty());
     }
 
-    class TestClass {
-
-    }
-
     @Test
     public void testIsInValid() {
-
         Set set = valid.validate(new ValidKeyTest(Long.toString(System.currentTimeMillis())));
         assertFalse(set.isEmpty());
     }

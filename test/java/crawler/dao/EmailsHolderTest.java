@@ -1,4 +1,4 @@
-/* 
+/*
  * The MIT License
  *
  * Copyright 2017 Michał Szymański, kontakt: michal.szymanski.aajar@gmail.com.
@@ -70,9 +70,7 @@ public class EmailsHolderTest {
         assertNotNull(eh.getEmailById(id));
     }
 
-    /**
-     * Test of removeEmail method, of class EmailsHolder.
-     */
+
     @Test(expected = EmptyResultDataAccessException.class)
     public void testRemoveEmail() {
         Number id = eh.addEmail(email);
@@ -82,9 +80,7 @@ public class EmailsHolderTest {
 
     }
 
-    /**
-     * Test of getEmailByConfirmKey method, of class EmailsHolder.
-     */
+
     @Test
     public void testGetByConfirmKey() {
         Number id = eh.addEmail(email);
@@ -93,9 +89,7 @@ public class EmailsHolderTest {
         assertEquals(email, email2);
     }
 
-    /**
-     * Test of getConfirmationKey method, of class EmailsHolder.
-     */
+
     @Test
     public void testGetConfirmationKey() {
         Number id = eh.addEmail(email);
@@ -103,9 +97,7 @@ public class EmailsHolderTest {
         assertFalse(key.isEmpty());
     }
 
-    /**
-     * Test of containsEmail method, of class EmailsHolder.
-     */
+
     @Test
     public void testContainsEmail() {
         Number id = eh.addEmail(email);
